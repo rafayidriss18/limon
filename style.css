@@ -9,14 +9,15 @@
   --wine-dark: #3b0917;
   --wine-light: #8d3049;
 
-  --black: #090707;
-  --black-soft: #120d0f;
-
-  --cream: #f5eee9;
+  --off-white: #f6f1ec;
+  --off-white-2: #eee7e1;
   --white: #ffffff;
 
-  --gray: #b9aaa5;
-  --line: rgba(255,255,255,0.14);
+  --text: #24191b;
+  --text-soft: #65595a;
+  --gray: #897b7b;
+
+  --line: rgba(60, 30, 35, 0.13);
 }
 
 html {
@@ -25,8 +26,8 @@ html {
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: var(--black);
-  color: var(--cream);
+  background: var(--off-white);
+  color: var(--text);
   line-height: 1.6;
 }
 
@@ -53,7 +54,6 @@ body {
 /* ================= NAVBAR ================= */
 
 .navbar {
-
   height: 86px;
 
   padding: 0 6vw;
@@ -64,7 +64,7 @@ body {
 
   justify-content: space-between;
 
-  background: rgba(9,7,7,0.96);
+  background: rgba(246, 241, 236, 0.97);
 
   border-bottom: 1px solid var(--line);
 
@@ -79,23 +79,21 @@ body {
 
 
 .logo {
-
   font-family: "Playfair Display", serif;
 
   font-size: 31px;
 
   letter-spacing: 0.15em;
 
-  color: white;
+  color: var(--wine-dark);
 }
 
 .logo span {
-  color: #a93450;
+  color: var(--wine-light);
 }
 
 
 nav {
-
   display: flex;
 
   gap: 35px;
@@ -103,8 +101,7 @@ nav {
 
 
 nav a {
-
-  color: #ded3cf;
+  color: var(--text);
 
   text-decoration: none;
 
@@ -118,12 +115,11 @@ nav a {
 }
 
 nav a:hover {
-  color: #c75b76;
+  color: var(--wine-light);
 }
 
 
 .nav-buttons {
-
   display: flex;
 
   gap: 10px;
@@ -131,12 +127,11 @@ nav a:hover {
 
 
 .nav-buttons button {
-
   border: none;
 
   background: none;
 
-  color: white;
+  color: var(--wine-dark);
 
   font-size: 23px;
 
@@ -152,7 +147,6 @@ nav a:hover {
 /* ================= MOBILE MENU ================= */
 
 .mobile-menu {
-
   display: none;
 
   position: fixed;
@@ -163,7 +157,7 @@ nav a:hover {
 
   width: 100%;
 
-  background: var(--black);
+  background: var(--off-white);
 
   padding: 30px;
 
@@ -174,10 +168,9 @@ nav a:hover {
 
 
 .mobile-menu a {
-
   display: block;
 
-  color: white;
+  color: var(--text);
 
   text-decoration: none;
 
@@ -196,7 +189,6 @@ nav a:hover {
 /* ================= SEARCH ================= */
 
 .search-box {
-
   display: none;
 
   position: fixed;
@@ -205,23 +197,24 @@ nav a:hover {
 
   right: 5vw;
 
-  background: var(--wine-dark);
+  background: var(--white);
 
   padding: 20px;
 
   z-index: 200;
 
-  box-shadow: 0 20px 60px #000;
+  box-shadow: 0 20px 60px rgba(60, 20, 25, .18);
+
+  border: 1px solid var(--line);
 }
 
 
 .search-box input {
-
-  background: transparent;
+  background: var(--off-white);
 
   border: 1px solid var(--line);
 
-  color: white;
+  color: var(--text);
 
   padding: 13px;
 
@@ -232,7 +225,6 @@ nav a:hover {
 
 
 .search-box button {
-
   background: var(--wine);
 
   border: none;
@@ -248,7 +240,6 @@ nav a:hover {
 /* ================= HERO ================= */
 
 .hero {
-
   min-height: calc(100vh - 121px);
 
   display: flex;
@@ -265,9 +256,9 @@ nav a:hover {
 
     linear-gradient(
       90deg,
-      rgba(9,7,7,.97) 0%,
-      rgba(9,7,7,.8) 45%,
-      rgba(100,19,38,.35) 100%
+      rgba(246,241,236,.98) 0%,
+      rgba(246,241,236,.86) 45%,
+      rgba(246,241,236,.25) 100%
     ),
 
     url("https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=2200&q=90")
@@ -277,7 +268,6 @@ nav a:hover {
 
 
 .hero::after {
-
   content: "";
 
   position: absolute;
@@ -288,7 +278,7 @@ nav a:hover {
 
   background: var(--wine);
 
-  opacity: .18;
+  opacity: .08;
 
   border-radius: 50%;
 
@@ -301,7 +291,6 @@ nav a:hover {
 
 
 .hero-content {
-
   max-width: 760px;
 
   position: relative;
@@ -311,7 +300,6 @@ nav a:hover {
 
 
 .small-title {
-
   font-size: 10px;
 
   letter-spacing: .28em;
@@ -320,12 +308,11 @@ nav a:hover {
 
   margin-bottom: 25px;
 
-  color: #d48a9d;
+  color: var(--wine);
 }
 
 
 .hero h1 {
-
   font-family: "Playfair Display", serif;
 
   font-size: clamp(55px, 7vw, 105px);
@@ -335,22 +322,22 @@ nav a:hover {
   font-weight: 500;
 
   margin-bottom: 30px;
+
+  color: var(--wine-dark);
 }
 
 
 .hero h1 em {
-
   display: block;
 
-  color: #d27b91;
+  color: var(--wine-light);
 }
 
 
 .hero-text {
-
   max-width: 550px;
 
-  color: #c5b8b3;
+  color: var(--text-soft);
 
   font-size: 16px;
 
@@ -360,7 +347,6 @@ nav a:hover {
 
 .primary-button,
 .light-button {
-
   display: inline-block;
 
   padding: 15px 28px;
@@ -383,7 +369,6 @@ nav a:hover {
 
 .primary-button:hover,
 .light-button:hover {
-
   background: var(--wine-light);
 
   transform: translateY(-3px);
@@ -393,13 +378,11 @@ nav a:hover {
 /* ================= SECTIONS ================= */
 
 .section {
-
   padding: 125px 8vw;
 }
 
 
 .section-number {
-
   border-top: 1px solid var(--line);
 
   padding-top: 16px;
@@ -408,7 +391,7 @@ nav a:hover {
 
   letter-spacing: .22em;
 
-  color: #a8948f;
+  color: var(--gray);
 
   margin-bottom: 70px;
 }
@@ -417,13 +400,11 @@ nav a:hover {
 /* ================= STORY ================= */
 
 .story {
-
-  background: var(--black-soft);
+  background: var(--off-white-2);
 }
 
 
 .story-grid {
-
   display: grid;
 
   grid-template-columns: 1.2fr .8fr;
@@ -433,7 +414,6 @@ nav a:hover {
 
 
 .story h2 {
-
   font-family: "Playfair Display", serif;
 
   font-size: clamp(40px, 5vw, 72px);
@@ -441,25 +421,24 @@ nav a:hover {
   line-height: 1.05;
 
   font-weight: 500;
+
+  color: var(--wine-dark);
 }
 
 
 .story h2 em {
-
-  color: #bd536d;
+  color: var(--wine-light);
 }
 
 
 .story-text {
-
-  color: #b8aaa5;
+  color: var(--text-soft);
 
   font-size: 16px;
 }
 
 
 .story-text p + p {
-
   margin-top: 25px;
 }
 
@@ -467,13 +446,11 @@ nav a:hover {
 /* ================= PRODUCTS ================= */
 
 .products {
-
-  background: var(--black);
+  background: var(--off-white);
 }
 
 
 .products-heading {
-
   display: grid;
 
   grid-template-columns: 1fr .7fr;
@@ -487,7 +464,6 @@ nav a:hover {
 
 
 .products-heading h2 {
-
   font-family: "Playfair Display", serif;
 
   font-size: clamp(45px, 5vw, 76px);
@@ -495,18 +471,18 @@ nav a:hover {
   line-height: 1;
 
   font-weight: 500;
+
+  color: var(--wine-dark);
 }
 
 
 .products-heading h2 em {
-
-  color: #b94c67;
+  color: var(--wine-light);
 }
 
 
 .products-heading > p {
-
-  color: #a99a95;
+  color: var(--text-soft);
 
   max-width: 450px;
 }
@@ -515,7 +491,6 @@ nav a:hover {
 /* ================= PRODUCT GRID ================= */
 
 .product-grid {
-
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
@@ -525,8 +500,7 @@ nav a:hover {
 
 
 .product-card {
-
-  background: #100a0c;
+  background: var(--white);
 
   border: 1px solid var(--line);
 
@@ -537,24 +511,24 @@ nav a:hover {
 
 
 .product-card:hover {
-
   transform: translateY(-8px);
 
-  border-color: rgba(189,83,109,.5);
+  border-color: rgba(100,19,38,.35);
+
+  box-shadow: 0 20px 50px rgba(60,20,25,.08);
 }
 
 
 .product-image {
-
   height: 420px;
 
   background:
 
     radial-gradient(
       circle at center,
-      #682034 0%,
-      #280c15 45%,
-      #0c0809 100%
+      #ead0d5 0%,
+      #d9b1ba 40%,
+      #c28a99 100%
     );
 
   display: flex;
@@ -568,26 +542,24 @@ nav a:hover {
 
 
 .product-image::before {
-
   content: "";
 
   width: 160px;
 
   height: 260px;
 
-  border: 1px dashed rgba(255,255,255,.25);
+  border: 1px dashed rgba(59,9,23,.28);
 
   position: absolute;
 }
 
 
 .product-image span {
-
   font-size: 10px;
 
   letter-spacing: .2em;
 
-  color: #a99691;
+  color: var(--wine-dark);
 
   position: relative;
 
@@ -596,34 +568,32 @@ nav a:hover {
 
 
 .product-info {
-
   padding: 27px;
 }
 
 
 .product-info > span {
-
   font-size: 10px;
 
-  color: #967d78;
+  color: var(--gray);
 }
 
 
 .product-info h3 {
-
   font-family: "Playfair Display", serif;
 
   font-size: 28px;
 
   font-weight: 500;
 
+  color: var(--wine-dark);
+
   margin: 8px 0 10px;
 }
 
 
 .product-info p {
-
-  color: #9e918d;
+  color: var(--text-soft);
 
   font-size: 13px;
 
@@ -632,12 +602,11 @@ nav a:hover {
 
 
 .product-info button {
-
   background: none;
 
   border: none;
 
-  color: #d06a83;
+  color: var(--wine);
 
   font-size: 10px;
 
@@ -652,7 +621,6 @@ nav a:hover {
 /* ================= STATEMENT ================= */
 
 .statement {
-
   min-height: 600px;
 
   display: flex;
@@ -669,15 +637,14 @@ nav a:hover {
 
     radial-gradient(
       circle at center,
-      #721c36,
-      #280b15 45%,
-      #090707 80%
+      #b85a70,
+      #7a263d 42%,
+      #3b0917 85%
     );
 }
 
 
 .statement h2 {
-
   font-family: "Playfair Display", serif;
 
   font-size: clamp(52px, 7vw, 100px);
@@ -685,25 +652,24 @@ nav a:hover {
   line-height: .95;
 
   font-weight: 500;
+
+  color: white;
 }
 
 
 .statement h2 em {
-
-  color: #d0788e;
+  color: #f3dce1;
 }
 
 
 /* ================= CEOS ================= */
 
 .ceos {
-
-  background: var(--black-soft);
+  background: var(--off-white-2);
 }
 
 
 .ceo-heading {
-
   display: grid;
 
   grid-template-columns: 1fr .7fr;
@@ -715,7 +681,6 @@ nav a:hover {
 
 
 .ceo-heading h2 {
-
   font-family: "Playfair Display", serif;
 
   font-size: clamp(45px, 5vw, 75px);
@@ -723,25 +688,24 @@ nav a:hover {
   line-height: 1;
 
   font-weight: 500;
+
+  color: var(--wine-dark);
 }
 
 
 .ceo-heading h2 em {
-
-  color: #b84e69;
+  color: var(--wine-light);
 }
 
 
 .ceo-heading p {
-
-  color: #a99994;
+  color: var(--text-soft);
 
   align-self: end;
 }
 
 
 .ceo-grid {
-
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
@@ -751,23 +715,21 @@ nav a:hover {
 
 
 .ceo-card {
-
   border: 1px solid var(--line);
 
-  background: #100a0c;
+  background: white;
 }
 
 
 .ceo-photo {
-
   height: 430px;
 
   background:
 
     linear-gradient(
       145deg,
-      #5b172c,
-      #19090e
+      #ead1d6,
+      #c98c9b
     );
 
   display: flex;
@@ -781,22 +743,20 @@ nav a:hover {
 
 
 .ceo-photo::before {
-
   content: "";
 
   width: 180px;
 
   height: 250px;
 
-  border: 1px dashed rgba(255,255,255,.22);
+  border: 1px dashed rgba(59,9,23,.28);
 
   position: absolute;
 }
 
 
 .ceo-photo span {
-
-  color: #aa9690;
+  color: var(--wine-dark);
 
   font-size: 10px;
 
@@ -807,14 +767,12 @@ nav a:hover {
 
 
 .ceo-info {
-
   padding: 25px;
 }
 
 
 .ceo-info > span {
-
-  color: #a65a6d;
+  color: var(--wine);
 
   font-size: 9px;
 
@@ -823,20 +781,20 @@ nav a:hover {
 
 
 .ceo-info h3 {
-
   font-family: "Playfair Display", serif;
 
   font-size: 28px;
 
   font-weight: 500;
 
+  color: var(--wine-dark);
+
   margin: 8px 0;
 }
 
 
 .ceo-info p {
-
-  color: #998b86;
+  color: var(--text-soft);
 
   font-size: 13px;
 }
@@ -845,13 +803,11 @@ nav a:hover {
 /* ================= VALUES ================= */
 
 .values {
-
-  background: #10090c;
+  background: var(--off-white);
 }
 
 
 .values-grid {
-
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
@@ -861,7 +817,6 @@ nav a:hover {
 
 
 .value {
-
   padding: 40px 45px 45px 0;
 
   border-bottom: 1px solid var(--line);
@@ -869,40 +824,37 @@ nav a:hover {
 
 
 .value:nth-child(odd) {
-
   border-right: 1px solid var(--line);
 }
 
 
 .value:nth-child(even) {
-
   padding-left: 45px;
 }
 
 
 .value > span {
-
   font-size: 10px;
 
-  color: #9d817c;
+  color: var(--gray);
 }
 
 
 .value h3 {
-
   font-family: "Playfair Display", serif;
 
   font-size: 32px;
 
   font-weight: 500;
 
+  color: var(--wine-dark);
+
   margin: 15px 0 8px;
 }
 
 
 .value p {
-
-  color: #9d918c;
+  color: var(--text-soft);
 
   max-width: 450px;
 
@@ -913,7 +865,6 @@ nav a:hover {
 /* ================= CTA ================= */
 
 .cta {
-
   padding: 120px 8vw;
 
   display: flex;
@@ -929,7 +880,6 @@ nav a:hover {
 
 
 .cta h2 {
-
   font-family: "Playfair Display", serif;
 
   font-size: clamp(55px, 6vw, 90px);
@@ -937,25 +887,24 @@ nav a:hover {
   line-height: .95;
 
   font-weight: 500;
+
+  color: white;
 }
 
 
 .cta h2 em {
-
   color: #dc8198;
 }
 
 
 .light-button {
-
-  background: var(--cream);
+  background: var(--off-white);
 
   color: var(--wine-dark);
 }
 
 
 .light-button:hover {
-
   background: white;
 
   color: var(--wine);
@@ -965,15 +914,15 @@ nav a:hover {
 /* ================= FOOTER ================= */
 
 footer {
-
-  background: #050404;
+  background: var(--off-white-2);
 
   padding: 75px 8vw 25px;
+
+  color: var(--text);
 }
 
 
 .footer-main {
-
   display: flex;
 
   justify-content: space-between;
@@ -985,35 +934,31 @@ footer {
 
 
 .footer-logo {
-
   font-family: "Playfair Display", serif;
 
   font-size: 32px;
 
   letter-spacing: .15em;
 
-  color: white;
+  color: var(--wine-dark);
 
   text-decoration: none;
 }
 
 
 .footer-logo span {
-
-  color: #a93b56;
+  color: var(--wine-light);
 }
 
 
 .footer-main > div:first-child p {
-
-  color: #81736f;
+  color: var(--text-soft);
 
   margin-top: 15px;
 }
 
 
 .footer-column {
-
   display: flex;
 
   flex-direction: column;
@@ -1023,8 +968,7 @@ footer {
 
 
 .footer-column h4 {
-
-  color: #876c68;
+  color: var(--wine);
 
   font-size: 9px;
 
@@ -1035,8 +979,7 @@ footer {
 
 
 .footer-column a {
-
-  color: #b9aaa6;
+  color: var(--text-soft);
 
   text-decoration: none;
 
@@ -1047,7 +990,6 @@ footer {
 
 
 .footer-bottom {
-
   border-top: 1px solid var(--line);
 
   padding-top: 20px;
@@ -1056,7 +998,7 @@ footer {
 
   justify-content: space-between;
 
-  color: #655956;
+  color: var(--gray);
 
   font-size: 9px;
 
@@ -1067,7 +1009,6 @@ footer {
 /* ================= TOAST ================= */
 
 .toast {
-
   position: fixed;
 
   bottom: 25px;
@@ -1093,7 +1034,6 @@ footer {
 
 
 .toast.show {
-
   opacity: 1;
 
   transform: translateY(0);
@@ -1112,10 +1052,6 @@ footer {
     display: block;
   }
 
-  .menu-button {
-    font-size: 20px !important;
-  }
-
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1132,7 +1068,6 @@ footer {
 @media (max-width: 650px) {
 
   .top-bar {
-
     height: 31px;
 
     font-size: 8px;
@@ -1146,7 +1081,6 @@ footer {
 
 
   .navbar {
-
     height: 75px;
 
     padding: 0 6vw;
@@ -1154,19 +1088,16 @@ footer {
 
 
   .logo {
-
     font-size: 26px;
   }
 
 
   .mobile-menu {
-
     top: 106px;
   }
 
 
   .hero {
-
     min-height: calc(100vh - 106px);
 
     padding: 30px 7vw;
@@ -1176,31 +1107,26 @@ footer {
 
 
   .hero h1 {
-
     font-size: 52px;
   }
 
 
   .hero-text {
-
     font-size: 14px;
   }
 
 
   .section {
-
     padding: 80px 7vw;
   }
 
 
   .section-number {
-
     margin-bottom: 50px;
   }
 
 
   .story-grid {
-
     grid-template-columns: 1fr;
 
     gap: 35px;
@@ -1208,13 +1134,11 @@ footer {
 
 
   .story h2 {
-
     font-size: 43px;
   }
 
 
   .products-heading {
-
     grid-template-columns: 1fr;
 
     gap: 25px;
@@ -1222,13 +1146,11 @@ footer {
 
 
   .products-heading h2 {
-
     font-size: 50px;
   }
 
 
   .product-grid {
-
     grid-template-columns: 1fr;
 
     gap: 18px;
@@ -1236,25 +1158,21 @@ footer {
 
 
   .product-image {
-
     height: 380px;
   }
 
 
   .statement {
-
     min-height: 480px;
   }
 
 
   .statement h2 {
-
     font-size: 56px;
   }
 
 
   .ceo-heading {
-
     grid-template-columns: 1fr;
 
     gap: 25px;
@@ -1262,25 +1180,21 @@ footer {
 
 
   .ceo-grid {
-
     grid-template-columns: 1fr;
   }
 
 
   .ceo-photo {
-
     height: 400px;
   }
 
 
   .values-grid {
-
     grid-template-columns: 1fr;
   }
 
 
   .value {
-
     padding: 35px 0 !important;
 
     border-right: none !important;
@@ -1288,7 +1202,6 @@ footer {
 
 
   .cta {
-
     padding: 85px 7vw;
 
     flex-direction: column;
@@ -1298,13 +1211,11 @@ footer {
 
 
   .cta h2 {
-
     font-size: 58px;
   }
 
 
   .footer-main {
-
     flex-direction: column;
 
     padding-bottom: 50px;
@@ -1312,7 +1223,6 @@ footer {
 
 
   .footer-bottom {
-
     flex-direction: column;
 
     gap: 10px;
@@ -1320,7 +1230,6 @@ footer {
 
 
   .search-box {
-
     top: 106px;
 
     left: 5vw;
@@ -1330,7 +1239,6 @@ footer {
 
 
   .search-box input {
-
     width: calc(100% - 50px);
   }
 
